@@ -5,6 +5,7 @@ export interface SessionData {
   user?: {
     email: string;
     isLoggedIn: boolean;
+    expiresAt?: number;
   };
   otp?: {
     email: string;
@@ -19,6 +20,7 @@ export const sessionOptions: SessionOptions = {
   cookieOptions: {
     secure: process.env.NODE_ENV === "production",
     httpOnly: true,
+    maxAge: 2 * 60,
   },
 };
 

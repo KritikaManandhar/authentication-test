@@ -75,7 +75,11 @@ export async function verifyOtpAction(prevState: any, formData: FormData) {
   }
 
   // 3. Establish Authenticated Session
-  session.user = { email: validated.data.email, isLoggedIn: true };
+  session.user = { 
+  email: validated.data.email, 
+  isLoggedIn: true,
+  //expiresAt: Date.now() + 2 * 60 * 1000 // Fixed 2 minutes from now even if server action performed
+};
   delete session.otp; // Clear single-use OTP
   await session.save();
 

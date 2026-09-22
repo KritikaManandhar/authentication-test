@@ -13,6 +13,10 @@ export async function middleware(request: NextRequest) {
     sessionOptions
   );
 
+//   if (session.user?.expiresAt && Date.now() > session.user.expiresAt) {
+//   session.destroy(); // Force logout even if the cookie maxAge hasn't triggered yet even if perform server action
+// }
+
   const { pathname } = request.nextUrl;
   //const pathname = request.nextUrl.pathname;
 
