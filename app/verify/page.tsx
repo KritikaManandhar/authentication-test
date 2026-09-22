@@ -48,7 +48,6 @@ function VerifyForm() {
 
       <CardContent>
         <form action={formAction} className="space-y-6">
-          {/* Hidden inputs to pass data to Server Action */}
           <input type="hidden" name="email" value={email} />
           <input type="hidden" name="code" value={code} />
 
