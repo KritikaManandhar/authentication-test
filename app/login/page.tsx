@@ -14,9 +14,9 @@ export default function LoginPage() {
 
     return (
         <main className="min-h-screen flex items-center justify-center bg-slate-50 dark:bg-slate-950 p-4">
-            <div className="w-full max-w-md">
+            <div className="w-full max-w-md flex flex-col items-center">
 
-                <form action={formAction}>
+                <form action={formAction} className="w-full flex justify-center">
                     <SwapForm
                         isSignIn={isSignIn}
                         onModeChange={setIsSignIn}
@@ -24,13 +24,13 @@ export default function LoginPage() {
                 </form>
 
                 {state?.error && (
-                    <p className="mt-4 text-center text-sm text-red-600 dark:text-red-400">
+                    <p className="mt-4 text-center text-sm font-medium text-red-600 dark:text-red-400">
                         {state.error}
                     </p>
                 )}
 
                 {isPending && (
-                    <p className="mt-4 text-center text-sm text-gray-500 dark:text-gray-400">
+                    <p className="mt-4 text-center text-sm text-slate-500 dark:text-slate-400 animate-pulse">
                         Sending verification code...
                     </p>
                 )}

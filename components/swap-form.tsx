@@ -130,6 +130,7 @@ export const SwapForm: FC<SwapFormProps> = ({
                                 Email
                             </label>
                             <input
+                                name="email"
                                 type="email"
                                 placeholder="name@example.com"
                                 className="w-full px-4 py-2.5 rounded-xl border-[1.2px] border-[#E7E7E7] dark:border-zinc-800 bg-white dark:bg-zinc-900 focus:ring-1 focus:ring-black dark:focus:ring-zinc-400 outline-none shadow-sm text-[15px] sm:text-base"
@@ -137,6 +138,7 @@ export const SwapForm: FC<SwapFormProps> = ({
                         </div>
 
                         <motion.button
+                            type="submit"
                             whileHover={{ scale: 1.015 }}
                             whileTap={{ scale: 0.97 }}
                             transition={{ type: "spring", stiffness: 400, damping: 25 }}
